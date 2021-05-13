@@ -7,7 +7,11 @@
     <groupId>by.by.a1qa.poznyak</groupId>
     <artifactId>restAPI</artifactId>
     <version>1.0-SNAPSHOT</version>
-
+ <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+    </properties>
    <dependencies>
     <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
         <dependency>
@@ -24,5 +28,13 @@
         </dependency>
 
     </dependencies>
-
+ <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-compiler-plugin</artifactId>
+                        <version>LATEST</version>
+                <configuration>
+                      <verbose>true</verbose>
+                      <fork>true</fork>
+                </configuration>
+             </plugin>
 </project>
